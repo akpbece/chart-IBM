@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM Stock Chart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>IBM Stock Chart</h1>
+    <div class="dropdown">
+        <label for="movingAverageSelect">Select Moving Average Period:</label>
+        <select id="movingAverageSelect">
+            <option value="5">5 days</option>
+            <option value="10">10 days</option>
+            <option value="20" selected>20 days</option>
+            <option value="200">200 days</option>
+        </select>
+    </div>
+    <div id="legend">
+        <div><span class="legend-color blue"></span> Closing Price</div>
+        <div><span class="legend-color red"></span> 20-Day Moving Average</div>
+    </div>
+    <div class="loader" id="loader">Loading...</div>
+    <canvas id="stockChart" width="800" height="400"></canvas>
+  
+    <script src="getChartData.js"></script>
+    <script src="chartEngine.js"></script>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
